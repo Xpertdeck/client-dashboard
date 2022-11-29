@@ -72,7 +72,7 @@ const index = () => {
             />
           </div>
           <div className="flex justify-between mt-[36px]">
-            <WalletCard amount = "15.00"/>
+            <WalletCard amount = "15.00" mainStyle = "xl:w-[580px] w-[500px] h-[320px] flex flex-col" buttonAlignment = "flex-row"/>
             <OfferCard/>
           </div>
         </div>

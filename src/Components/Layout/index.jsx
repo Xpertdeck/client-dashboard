@@ -9,9 +9,9 @@ const Layout = ({ className = "", ctaText = "GET A QUOTE", children }) => {
       >
         <div>
           <Header />
-          <div className="my-[20px]">{children}</div>
+          <div className="">{children}</div>
         </div>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </>
   );

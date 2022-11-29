@@ -1,70 +1,63 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 const SidePanel = () => {
+  useEffect(() => {
+    let path = window.location.pathname;
+    console.log(path);
+  }, []);
   return (
     <>
-      <div className="flex flex-col items-center h-[798px] bg-[#2D9CDB] ml-[36px] px-[36px] py-[42px] sticky rounded-[12px]">
-        <div className="h-full flex flex-col justify-between">
-          <div className="flex flex-col items-center h-[55%] justify-between">
+      <div className="flex flex-col h-[860px] w-[18%] bg-[#2D9CDB] sticky">
+        <div className="h-full flex flex-col items-center justify-between">
+          <div className="flex flex-col  h-[55%] mt-[70px]">
             <Link href="/">
-              <div className="select">
+              <div className="select flex py-[16px]">
                 <Image
                   src="/Images/SidePanel/home.svg"
-                  width={24}
-                  height={24}
+                  width={20}
+                  height={20}
                   alt="home"
                 />
+                <p className="font-medium text-base text-[#FFFFFF] tracking-wider ml-[13px]">
+                  Dashboard
+                </p>
               </div>
             </Link>
             <Link href="/dashboard-all-orders">
-              <div>
+              <div className="flex py-[16px] mt-[41px]">
                 <Image
                   src="/Images/SidePanel/line.svg"
-                  width={26}
-                  height={26}
-                  alt="home"
-                />
-              </div>
-            </Link>
-            <Link href="/">
-              <div>
-                <Image
-                  src="/Images/SidePanel/pc.svg"
                   width={24}
                   height={24}
                   alt="home"
                 />
+                <p className="font-medium text-base text-[#FFFFFF] tracking-wider ml-[13px]">
+                  All Orders
+                </p>
               </div>
             </Link>
             <Link href="/offers">
-              <div>
+              <div className="flex py-[16px] mt-[41px]">
                 <Image
                   src="/Images/SidePanel/tag.svg"
-                  width={26}
-                  height={26}
+                  width={24}
+                  height={24}
                   alt="home"
                 />
-              </div>
-            </Link>
-            <Link href="/">
-              <div>
-                <Image
-                  src="/Images/SidePanel/people.svg"
-                  width={27}
-                  height={27}
-                  alt="home"
-                />
+                <p className="font-medium text-base text-[#FFFFFF] tracking-wider ml-[13px]">
+                  Offers
+                </p>
               </div>
             </Link>
           </div>
           <Link href="/login">
-            <div> 
+            <div>
               <Image
                 src="/Images/SidePanel/exit.svg"
-                width={27}
-                height={27}
+                width={24}
+                height={24}
                 alt="home"
               />
             </div>
