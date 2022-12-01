@@ -8,7 +8,7 @@ const Orders = () => {
       status: "Completed",
       next: true,
       complete: true,
-      completePer: "100%",
+      completePer: 100,
       reward: null
     },
     {
@@ -16,7 +16,7 @@ const Orders = () => {
       status: "Completed",
       next: true,
       complete: true,
-      completePer: "100%",
+      completePer: 100,
       reward: null
     },
     {
@@ -24,7 +24,7 @@ const Orders = () => {
       status: "Completed",
       next: true,
       complete: true,
-      completePer: "50%",
+      completePer: 50,
       reward: null
     },
     {
@@ -32,7 +32,7 @@ const Orders = () => {
       status: "Pending",
       next: true,
       complete: false,
-      completePer: "0%",
+      completePer: 0,
       reward: null
     },
     {
@@ -40,7 +40,7 @@ const Orders = () => {
       status: "Pending",
       next: true,
       complete: false,
-      completePer: "0%",
+      completePer: 0,
       reward: "Offer Locked"
     },
     {
@@ -48,7 +48,7 @@ const Orders = () => {
       status: "Pending",
       next: true,
       complete: false,
-      completePer: "0%",
+      completePer: 0,
       reward: null
     },
     {
@@ -56,7 +56,7 @@ const Orders = () => {
       status: "Pending",
       next: true,
       complete: false,
-      completePer: "0%",
+      completePer: 0,
       reward: null
     },
     {
@@ -64,14 +64,14 @@ const Orders = () => {
       status: "Pending",
       next: false,
       complete: false,
-      completePer: "0%",
+      completePer: 0,
       reward: null
     },
   ];
   return (
     <>
-      <div className="flex flex-col items-center ml-[48px] h-[713px] mt-[36px] rounded-[12px] overflow-y-scroll w-[22%] bg-[#FFFFFF]">
-        <div className="py-[50px]">
+      <div className="flex flex-col items-center h-[713px] mt-[36px] rounded-[12px] overflow-y-scroll w-[18%] bg-[#FFFFFF]">
+        <div className="py-[22px]">
           {data.map((ele, key) => {
             return (
               <>
@@ -95,7 +95,7 @@ const Orders = () => {
                         }`}
                       >
                         <div
-                          className={`w-full bg-[#4490C9] rounded-lg h-[${ele.completePer}]`}
+                          className={`w-full bg-[#4490C9] rounded-lg h-[${ele.completePer}%]`}
                         ></div>
                       </div>
                     </div>
