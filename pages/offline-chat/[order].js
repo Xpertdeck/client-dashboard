@@ -136,9 +136,9 @@ const Order = () => {
               <DetailsBox
                 cardTitle="Order Details"
                 cardDetails={[
-                  `Subject - ${data[currentTarget].subject}`,
+                  `Subject - ${data[currentTarget].subject !== null ? data[currentTarget].subject : ""}`,
                   `Word Count - 10000`,
-                  `Deadline - ${data[currentTarget].date}`,
+                  `Deadline - ${data[currentTarget].date !== null ? data[currentTarget].date : ""}`,
                   "Referencing style",
                 ]}
                 button={false}
