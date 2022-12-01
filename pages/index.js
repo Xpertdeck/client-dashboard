@@ -25,18 +25,18 @@ const index = () => {
       currPrice: "AUD 445.00",
       prevPrice: "AUD 556.00",
       off: "20% off",
-      status: "Success",
+      status: "Pending",
     },
   ];
   return (
     <>
       <div className="flex">
         <SidePanel />
-        <div className="w-[85%] ml-[31px]">
-          <h2 className="text-[30px] font-semibold text-[#000000]">
+        <div className="w-[100%] ml-[48px] mt-[36px]">
+          <h2 className="text-[24px] font-semibold text-[#000000]">
             Hello, John! &#128075;
           </h2>
-          <select className="bg-[#2D9CDB] rounded-lg w-[222px] h-[50px] text-[#F6F5F8] text-[20px] font-medium py-[10px] px-[16px] focus:outline-none mt-[24px] mb-[16px]">
+          <select className="bg-[#2D9CDB] rounded-lg w-[164px] text-[#F6F5F8] text-[16px] font-medium h-[40px] pl-[16px] focus:outline-none mt-[36px] mb-[24px]">
             <option
               value="Recent Orders"
               className="bg-[#ffffff] text-[#565D5C] rounded-none"
@@ -71,8 +71,8 @@ const index = () => {
               buttonText="View All"
             />
           </div>
-          <div className="flex justify-between mt-[36px]">
-            <WalletCard amount = "15.00" mainStyle = "xl:w-[580px] w-[500px] h-[320px] flex flex-col" buttonAlignment = "flex-row"/>
+          <div className="flex justify-between w-[96%] mt-[36px]">
+            <WalletCard amount = "15.00" mainStyle = "xl:w-[536px] w-[500px] h-[310px] flex flex-col" buttonAlignment = "flex-row mt-[48px] ml-[22px] mb-[22px]"/>
             <OfferCard/>
           </div>
         </div>

@@ -6,19 +6,19 @@ import CommonButton from "../Button";
 const Header = () => {
   return (
     <>
-      <div className="flex flex-row bg-[#151515] h-[78px] items-center justify-between">
-        <Link href= "/">
-          <div className="ml-[120px]">
+      <div className="flex flex-row bg-[#151515] h-[56px] items-center justify-between">
+        <Link href="/">
+          <div className="ml-[50px]">
             <Image
               src="/Images/Common/logo.svg"
-              width={135}
+              width={133}
               height={32}
               alt="Logo"
             />
           </div>
         </Link>
-        <div className="w-[70%] flex items-center">
-          <div className="flex w-[45%] items-center bg-[white] rounded-[5px] py-[11px] px-[18px]">
+        <div className="w-[67%] flex items-center justify-between">
+          <div className="flex w-[42%] h-[30px] items-center bg-[white] rounded-[5px] py-[11px] px-[18px]">
             <div>
               <Image
                 src="/Images/Common/Search.svg"
@@ -36,33 +36,35 @@ const Header = () => {
           <div className="flex ml-[73px] w-[40%] items-center">
             <CommonButton
               buttonLink="/new-assignment"
-              buttonStyle="px-[16px] py-[8px] gradientBG rounded-lg"
+              buttonStyle="px-[16px] h-[34px] gradientBG rounded-lg"
               buttonText="New Assignment"
               buttonFontStyle="text-xs font-semibold text-[#EAF3F9] text-center"
             />
-            <div className="ml-[35px] cursor-pointer">
+            <div className="ml-[24px] cursor-pointer">
               <Image
                 src="/Images/Common/Notification.svg"
-                width={25}
-                height={25}
+                width={24}
+                height={22}
                 alt="notification"
               />
             </div>
-            <div className="flex flex-col items-center ml-[35px] cursor-pointer">
-              <Image
-                src="/Images/Common/Wallet.svg"
-                width={25}
-                height={25}
-                alt="notification"
-              />
-              {/* <p className="gradientBG text-[8px] font-medium text-[#FFFFFF] px-[8px] rounded-[12px]">$15.00</p> */}
-            </div>
-            <div className="ml-[35px] cursor-pointer">
+            <Link href='/dashboard-wallet'>
+              <div className="flex flex-col items-center ml-[24px] cursor-pointer">
+                <Image
+                  src="/Images/Common/Wallet.svg"
+                  width={23}
+                  height={20}
+                  alt="wallet"
+                />
+                {/* <p className="gradientBG text-[8px] font-medium text-[#FFFFFF] px-[8px] rounded-[12px]">$15.00</p> */}
+              </div>
+            </Link>
+            <div className="ml-[24px] cursor-pointer">
               <Image
                 src="/Images/Common/Avtar.svg"
-                width={41}
-                height={41}
-                alt="notification"
+                width={36}
+                height={36}
+                alt="profile"
               />
             </div>
           </div>

@@ -8,10 +8,10 @@ const WalletCard = (props) => {
       <div className="flex flex-col">
         <div className="px-[22px] pt-[26px] flex  justify-between">
           <div className="flex flex-row border broder-[#EAF3F9] rounded-[5px]">
-            <div className="bg-[#EAF3F9] text-[#2D9CDB] w-[111px] rounded-[5px] font-normal text-[16px] px-[13px] py-[8px]">
+            <div className="bg-[#EAF3F9] text-[#2D9CDB] w-[111px] rounded-[5px] font-normal text-[16px] px-[13px] h-[40px]">
               <p>My wallet</p>
             </div>
-            <div className="text-[#EAF3F9] text-[16px] w-[111px] font-semibold flex items-center justify-center py-[8px] px-[16px]">
+            <div className="text-[#EAF3F9] text-[16px] w-[111px] font-semibold flex items-center justify-center h-[40px] px-[16px]">
               <p>USD {props.amount}</p>
             </div>
           </div>
@@ -50,7 +50,7 @@ const WalletCard = (props) => {
         />
         <CommonButton
           buttonLink="/"
-          buttonStyle={`border border-[] rounded-[5px] ml-[13px] h-[40px] ${props.buttonStyle}`}
+          buttonStyle={`border rounded-[5px] ml-[13px] h-[40px] ${props.buttonStyle}`}
           buttonFontStyle="text-[16px] text-[#FFFFFF]  px-[16px] font-medium"
           buttonText="YOU GET"
         />

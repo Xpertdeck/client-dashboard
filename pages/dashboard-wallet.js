@@ -1,7 +1,7 @@
 import React from "react";
 import Balance from "../src/Components/Balance";
 import PaymentPartners from "../src/Components/Payment";
-import ReferralCard from "../src/Components/Referral";
+import ReferralCard from "../src/Components/Referral"; 
 import SidePanel from "../src/Components/SidePanel";
 import WalletCard from "../src/Components/WalletCard";
 
@@ -12,7 +12,7 @@ const Wallet = () => {
         <SidePanel />
         <div className="flex flex-col w-[100%] ml-[31px] mr-[45px] mt-[36px]">
           <div className="flex w-[100%]">
-            <div className="flex flex-col w-[55%]"> 
+            <div className="flex flex-col w-[55%]">
               <Balance
                 style="bg-[#FFFFFF] h-[210px] w-full rounded-[12px]"
                 heading="Total Balance"
@@ -47,7 +47,13 @@ const Wallet = () => {
               imgAlt3="razorpay"
             />
           </div>
-          <ReferralCard referralCardStyle = "w-[100%] h-[220px] mt-[25px] gradientBG" ReferralCardHeadingStyle = "mt-[24px] text-[#FFFFFF] text-[36px] font-[700] tracking-wider" ReferralCardTextStyle = "mt-[14px] text-[#FFFFFF] text-[14px] font-normal text-center tracking-wider" code= "MOSJ220R" codeStyle = "text-[#2784B9] text-center text-[18px] font-[600] tracking-[0.2em]"/>
+          <ReferralCard
+            referralCardStyle="w-[100%] h-[220px] mt-[25px] gradientBG"
+            ReferralCardHeadingStyle="mt-[24px] text-[#FFFFFF] text-[36px] font-[700] tracking-wider"
+            ReferralCardTextStyle="mt-[14px] text-[#FFFFFF] text-[14px] font-normal text-center tracking-wider"
+            code="MOSJ220R"
+            codeStyle="text-[#2784B9] text-center text-[18px] font-[600] tracking-[0.2em]"
+          />
         </div>
       </div>
     </>
