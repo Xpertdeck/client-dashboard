@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import SidePanel from "../../src/Components/SidePanel";
 import { useRouter } from "next/router";
 import DetailsBox from "../../src/Components/DeatilsBox";
@@ -112,15 +112,16 @@ const Order = () => {
   const router = useRouter();
   let order = String(router.query.order);
   order = order.replace("%20", " ");
-  let currentTarget = -1;
+  let currentTarget = 0;
 
-  for (let i = 0; i < data.length; i++) {
-    if (data[i].id == order.toString()) {
-      currentTarget = i;
-      break;
+  useEffect(() => {
+    for (let i = 0; i < data.length; i++) {
+      if (data[i].id == order) {
+        currentTarget = i;
+        break;
+      }
     }
-  }
-
+  }, []);
   // console.log(currentTarget)
 
   return (
@@ -136,11 +137,9 @@ const Order = () => {
               <DetailsBox
                 cardTitle="Order Details"
                 cardDetails={[
-                  // `Subject - ${data[currentTarget].subject !== null ? data[currentTarget].subject : ""}`,
+                  `Subject - ${data[currentTarget].subject}`,
                   `Word Count - 10000`,
-                  `subject - IT`,
-                  `Deadline - 17 July 2022`,
-                  // `Deadline - ${data[currentTarget].date !== null ? data[currentTarget].date : ""}`,
+                  `Deadline - ${data[currentTarget].date}`,
                   "Referencing style",
                 ]}
                 button={false}
